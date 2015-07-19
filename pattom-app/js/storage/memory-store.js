@@ -32,11 +32,11 @@ var MemoryStore = function(successCallback, errorCallback) {
     }
 
     this.stadiums = [
-            {"id": 1, "stadiumName": "Nationals-Park", "prettyName": "Nationals Park", "city":"Washington, DC", "officePhone":"212-999-8887", "email":"nats@nationals.com"},
-            {"id": 2, "stadiumName": "Lane-Stadium", "prettyName": "Lane Stadium", "city":"Blacksburg, VA", "officePhone":"212-999-8887", "email":"hokie@vt.edu"},
-			{"id": 3, "stadiumName": "Byrd-Stadium", "prettyName": "Byrd Stadium", "city":"College Park, MD", "officePhone":"212-999-8887", "email":"terps@umd.edu"},
+            {"id": 1, "stadiumName": "Nationals-Park", "prettyName": "Nationals Park", "city":"Washington, DC", "officePhone":"212-999-8887", "email":"nats@nationals.com", "hawkers":[{"hawkerid":"#1234"}, {"hawkerid":"#235325"}]},
+            {"id": 2, "stadiumName": "Lane-Stadium", "prettyName": "Lane Stadium", "city":"Blacksburg, VA", "officePhone":"212-999-8887", "email":"hokie@vt.edu", "hawkers":[{"hawkerid":"#1234"}, {"hawkerid":"#235325"}]},
+			{"id": 3, "stadiumName": "Byrd-Stadium", "prettyName": "Byrd Stadium", "city":"College Park, MD", "officePhone":"212-999-8887", "email":"terps@umd.edu", "hawkers":[{"hawkerid":"#1234"}, {"hawkerid":"#235325"}]},
         ];
-
+	
     callLater(successCallback);
 
 }
