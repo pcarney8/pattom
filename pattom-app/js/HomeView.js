@@ -12,8 +12,8 @@ var HomeView = function(store) {
     };
 
     this.findByName = function() {
-        store.findByName($('.search-key').val(), function(employees) {
-            $('.employee-list').html(HomeView.liTemplate(employees));
+        store.findByName($('.search-key').val(), function(stadiums) {
+            $('.stadium-list').html(HomeView.liTemplate(stadiums));
         });
     };
 
@@ -22,4 +22,4 @@ var HomeView = function(store) {
 }
 
 HomeView.template = Handlebars.compile($("#home-tpl").html());
-HomeView.liTemplate = Handlebars.compile($("#employee-li-tpl").html());
+HomeView.liTemplate = Handlebars.compile($("#stadium-li-tpl").html());

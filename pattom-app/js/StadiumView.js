@@ -1,4 +1,4 @@
-var EmployeeView = function(employee) {
+var StadiumView = function(stadium) {
 
     this.initialize = function() {
         this.el = $('<div/>');
@@ -8,7 +8,7 @@ var EmployeeView = function(employee) {
     };
 
     this.render = function() {
-        this.el.html(EmployeeView.template(employee));
+        this.el.html(StadiumView.template(stadium));
         return this;
     };
 
@@ -32,13 +32,13 @@ var EmployeeView = function(employee) {
             app.showAlert("Contacts API not supported", "Error");
             return;
         }
-        var contact = navigator.contacts.create();
+        /* var contact = navigator.contacts.create();
         contact.name = {givenName: app.currentEmployee.firstName, familyName:  app.currentEmployee.lastName};
         var phoneNumbers = [];
         phoneNumbers[0] = new ContactField('work', app.currentEmployee.officePhone, false);
         phoneNumbers[1] = new ContactField('mobile', app.currentEmployee.cellPhone, true); // preferred number
         contact.phoneNumbers = phoneNumbers;
-        contact.save();
+        contact.save(); */
         return false;
     };
 
@@ -71,4 +71,4 @@ var EmployeeView = function(employee) {
 
 }
 
-EmployeeView.template = Handlebars.compile($("#employee-tpl").html());
+StadiumView.template = Handlebars.compile($("#stadium-tpl").html());

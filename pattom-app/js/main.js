@@ -32,8 +32,8 @@ var app = {
         }
         var match = hash.match(this.detailsURL);
         if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
-                self.slidePage(new EmployeeView(employee).render());
+            this.store.findById(Number(match[1]), function(stadium) {
+                self.slidePage(new StadiumView(stadium).render());
             });
         }
     },
@@ -79,7 +79,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.detailsURL = /^#employees\/(\d{1,})/;
+        this.detailsURL = /^#stadiums\/(\d{1,})/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
             self.route();
