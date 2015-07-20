@@ -6,7 +6,7 @@ var StadiumView = function(stadium) {
 
     this.render = function() {
         this.el.html(StadiumView.template(stadium));
-		$('.hawker-list').html(StadiumView.liTemplate({"hawkerid":"99999"}));
+		$('.hawker-list').html(StadiumView.liTemplate([{"hawkerid":"99999"}, {"hawkerid":"44444"}]));
         return this;
     };
 
