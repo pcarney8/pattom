@@ -2,11 +2,11 @@ var StadiumView = function(stadium) {
 
     this.initialize = function() {
         this.el = $('<div/>');
-		$('.hawker-list').html(StadiumView.liTemplate(stadium.hawkers));
     };
 
     this.render = function() {
         this.el.html(StadiumView.template(stadium));
+		$('.hawker-list').html(StadiumView.liTemplate(stadium.hawkers));
         return this;
     };
 
