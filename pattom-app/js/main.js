@@ -36,6 +36,13 @@ var app = {
                 self.slidePage(new StadiumView(stadium).render());
             });
         }
+		
+		match = hash.match(this.hawkersURL);
+		if (match) {
+			this.store.findById(Number(match[1]), function(hawker) {
+				self.slidePage(new HawkerView(hawker).render());
+			});
+		}
     },
 
     slidePage: function(page) {
@@ -80,6 +87,7 @@ var app = {
     initialize: function() {
         var self = this;
         this.detailsURL = /^#stadiums\/(\d{1,})/;
+		this.hawkersURL = /^#hawkers\/(\d{1,})/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
             self.route();

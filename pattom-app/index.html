@@ -17,13 +17,28 @@
     {{/.}}
 </script>
 
-<!-- <script id="hawker-li-tpl" type="text/x-handlebars-template">
+<script id="hawker-li-tpl" type="text/x-handlebars-template">
 	{{#.}}
-	<li><a href="">{{this.
-</script> -->
+	<li><a href="#hawkers/{{this.hawkerid}}">{{this.hawkerid}}</a></li>
+	{{/.}}
+</script>
+
+<script id="item-li-tpl" type="text/x-handlebars-template">
+	{{#.}}
+	<li><a href="#">{{this.item}}</a></li>
+	{{/.}}
+</script>
 
 <script id="stadium-tpl" type="text/x-handlebars-template">
     <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
+<!-- 	<div class="hawkers">
+	<h1>Current Hawkers Available</h1>
+	<ul>
+	{{#each hawkers}}
+		<li>{{hawkerid}}</li>
+	{{/each}}
+	</ul>
+	</div> -->
     <div class='details'>
     <img id='image' src='img/{{stadiumName}}.jpg' style="float:left;margin:10px;"/>
     <h1>{{stadiumName}}</h1>
@@ -32,20 +47,15 @@
     <ul>
     <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
 	<li><a href="mailto:{{email}}">Email<br/>{{email}}</a></li>
-    <li><a href="#" class="add-location-btn">Add Location</a></li>
-    <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
-    <li><a href="#" class="change-pic-btn">Change Picture</a></li>
     </ul>
     </div>
-	<!-- <div class="scroll"><ul class='hawker-list'></ul></div> -->
-	<h1>Current Hawkers Available</h1>
-	<div class="hawkers">
-	<h1>Current Hawkers Available</h1>
-	<ul>
-	{{#each hawkers}}
-		<li>{{hawkerid}}</li>
-	{{/each}}
-	</ul></div>
+	<div class="scroll"><ul class='hawker-list'></ul></div>
+</script>
+
+<script id="hawker-tpl" type="text/x-handlebars-template">
+	<div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>{{id}}</h1></div>
+	<div class="items"><h2>List of Available items</h2></div>
+	<div class="scroll"><ul class='item-list'></ul></div>
 </script>
 
 <script src="phonegap.js"></script>
@@ -54,6 +64,7 @@
 <script src="js/storage/memory-store.js"></script>
 <script src="js/HomeView.js"></script>
 <script src="js/StadiumView.js"></script>
+<script src="js/HawkerView.js"></script>
 <script src="js/main.js"></script>
 
 </body>
