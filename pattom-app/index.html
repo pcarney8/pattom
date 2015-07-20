@@ -19,7 +19,7 @@
 
 <script id="hawker-li-tpl" type="text/x-handlebars-template">
 	{{#.}}
-	<li><a href="#hawkers/{{this.hawkerid}}">{{this.hawkerid}}</a></li>
+	<li><a href="#">{{this.hawkerid}}</a></li>
 	{{/.}}
 </script>
 
@@ -31,14 +31,14 @@
 
 <script id="stadium-tpl" type="text/x-handlebars-template">
     <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
-<!-- 	<div class="hawkers">
+	<div class="hawkers">
 	<h1>Current Hawkers Available</h1>
 	<ul>
 	{{#each hawkers}}
 		<li>{{hawkerid}}</li>
 	{{/each}}
 	</ul>
-	</div> -->
+	</div>
     <div class='details'>
     <img id='image' src='img/{{stadiumName}}.jpg' style="float:left;margin:10px;"/>
     <h1>{{stadiumName}}</h1>
